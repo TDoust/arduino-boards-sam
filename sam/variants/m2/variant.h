@@ -25,23 +25,13 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_ARDUINO_DUE_X_
-#define _VARIANT_ARDUINO_DUE_X_
+#ifndef _VARIANT_MACCHINA_M2_
+#define _VARIANT_MACCHINA_M2_
 
 
 /*----------------------------------------------------------------------------
  *        Definitions
  *----------------------------------------------------------------------------*/
-
-/*************************************************************************************
-*                   WARNING for use with M2 BETA  Hardware ONLY                      *
-* Uncomment the following define to use the BETA version of the GPIOx_B sink OUTPUTS *
-*                                                                                    *
-*************************************************************************************/
-
-//#define M2_Beta
-
-/************************************************************************************/
 
 /** Frequency of the board main oscillator */
 #define VARIANT_MAINOSC     12000000
@@ -146,7 +136,7 @@ extern "C"{
 #define GPIO5           28
 #define GPIO6           29
 
-#ifdef M2_Beta  // M2 Beta legacy Hardware Sink Input Pins
+#ifdef MACCHINA_M2_BETA  // M2 Beta legacy Hardware Sink Input Pins
     // M2 GPIO_B pins for Sinking INPUT Pins
     #define GPIO1_B     30
     #define GPIO2_B     31
@@ -462,5 +452,5 @@ extern USARTClass Serial3;  // UART3/TXD3, RXD3 26 pin connector
 #define SERIAL_PORT_HARDWARE2       Serial2     // LIN_LTX, LIN_LRX
 #define SERIAL_PORT_HARDWARE3       Serial3     // UART3/TXD3, RXD3 26 pin connector
 
-#endif /* _VARIANT_ARDUINO_DUE_X_ */
+#endif /* _VARIANT_MACCHINA_M2_ */
 
